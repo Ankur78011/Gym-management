@@ -1,0 +1,4 @@
+create table customers(id serial primary key,customer_id int,current_weight int,target_weight int,trainer_id int,gym_id int,
+					  constraint customer_id_to_users foreign key (customer_id) references users(id),
+					  constraint trainer_id_to_users foreign key(trainer_id) references users(id),
+					  constraint gym_id_to_gyms foreign key (gym_id) references gyms(id))
